@@ -11,9 +11,12 @@
           body {
             background-color: black
           }
-          .galleria{
+          .galleria {
             margin: 0 auto;
             background: #000;
+          }
+          #finalLinks {
+            display: none;
           }
         </style>
         <link type='text/css' rel='stylesheet' href='quiz.css'/>
@@ -33,6 +36,8 @@
 
         <script type='text/javascript' src='questions.js'></script>
         <script type='text/javascript' src='quiz.js'></script>
+
+        <!-- Galleria -->
         <script>
           window.successCallback = function() {
             $('#quizContainer').hide();
@@ -43,5 +48,11 @@
             loadScript('mw.js', function() {});
           }
         </script>
+
+        <!-- Direct Download Links -->
+        <div id='finalLinks'>
+          <a class='btn blue' id='showAllPhotos' href='#'>Show All Photos</a>
+          <a class='btn blue' id='directDownload' href='http://www.michellewang.net/Alaska.zip'>Download Original Alaska Photos</a>
+        </div>
     </body>
 </html>
