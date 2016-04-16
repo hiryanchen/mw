@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Language" content="zh-CN" />
+        <title>Michelle Wang</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/galleria.min.js"></script>
+        <script src="http://www.ryanchen.com/js/util.js"></script>
+        <style>
+          body {
+            background-color: black
+          }
+          .galleria{
+            margin: 0 auto;
+            background: #000;
+          }
+        </style>
+        <link type='text/css' rel='stylesheet' href='quiz.css'/>
+    </head>
+    <body>
+        <!-- Challenges -->
+        <div id='quizContainer'>
+            <div id='title'>
+                <h1>Who are you?</h1>
+            </div>
+            <br/>
+            <div id='quiz'></div>
+            <a class='btn blue' id='next'>Next</a>
+            <a class='btn blue' id='prev'>Prev</a>
+            <a class='btn red' id='start'>Start Over</a>
+        </div>
+
+        <script type='text/javascript' src='questions.js'></script>
+        <script type='text/javascript' src='quiz.js'></script>
+        <script>
+          window.successCallback = function() {
+            $('#quizContainer').hide();
+            var divElem = document.createElement('div');
+            divElem.id = 'idGalleria';
+            divElem.className = 'galleria';
+            document.body.appendChild(divElem);
+            loadScript('mw.js', function() {});
+          }
+        </script>
+    </body>
+</html>
