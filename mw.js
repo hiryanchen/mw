@@ -7,12 +7,12 @@
   ];
   var galleriaDiv = document.getElementById('idGalleria');
   var data = [];
-  for (var i=0; i<2; i++) {
+  for (var i=0; i<photos.length; i++) {
     //var imgElem = document.createElement('img');
     //imgElem.src = 'photos/IMG_' + photos[i] + '.JPG';
     //galleriaDiv.appendChild(imgElem);
     data.push({
-      image: 'http://www.michellewang.net/photos/IMG_' + photos[i] + '.JPG',
+      image: 'http://www.michellewang.net/s/IMG_' + photos[i] + '.jpg',
       title: 'Alaska',
       description: 'Alaska'
     })
