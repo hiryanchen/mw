@@ -19,8 +19,18 @@
   }
   Galleria.loadTheme('http://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/themes/classic/galleria.classic.min.js');
 
+  var viewedPhotos = [];
   Galleria.ready(function(options) {
     //this.openLightbox();
+    this.bind('image', function (e) {
+      var index = viewedPhotos.indexOf(e.imageTarget.src);
+      if (index === -1) {
+        viewedPhotos.push(e.imageTarget.src);
+      }
+      if (viewedPhotos.length === photos.length) {
+        console.log('You viewed all the photos');
+      }
+    });
   });
 
   Galleria.run('.galleria', {
