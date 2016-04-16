@@ -36,6 +36,7 @@ var allPhotos = [
 function updateDirectLinks() {
   $('#showAllPhotos').on('click', function() {
     showGalleria(allPhotos, 'http://www.michellewang.net/all/IMG_');
+    $('#finalLinks').hide();
   });
   $('#finalLinks').show();
 }
